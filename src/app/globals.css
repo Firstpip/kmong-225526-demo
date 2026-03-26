@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --accent: #2563eb;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 14px;
+  padding-right: 32px !important;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  font-size: 14px;
+  color: var(--foreground);
+  background-color: var(--background);
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--foreground);
+}
+
+select:hover {
+  border-color: #999;
+}
+
+/* Rich content styles for product detail */
+.rich-content img { max-width: 100%; height: auto; margin: 16px 0; }
+.rich-content h2 { font-size: 20px; font-weight: 700; margin: 24px 0 12px; }
+.rich-content h3 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; }
+.rich-content p { margin: 8px 0; line-height: 1.7; }
+.rich-content ul, .rich-content ol { padding-left: 24px; margin: 8px 0; }
+.rich-content li { margin: 4px 0; }
+.rich-content blockquote { border-left: 3px solid #e5e7eb; padding-left: 16px; color: #6b7280; margin: 16px 0; }
+
+/* Rich editor styles */
+.rich-editor .ql-container { min-height: 200px; font-size: 14px; }
+.rich-editor .ql-editor { min-height: 200px; }
+.rich-editor .ql-toolbar { border-color: var(--border); }
+.rich-editor .ql-container { border-color: var(--border); }
